@@ -1,0 +1,16 @@
+﻿<Window x:Class="Views.ReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cr="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer"
+        Title="Informe"
+        Width="1000"
+        Height="700"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False"
+ 
+        >
+
+    <Grid>
+        <cr:CrystalReportsViewer x:Name="ReportViewer" />
+    </Grid>
+</Window>

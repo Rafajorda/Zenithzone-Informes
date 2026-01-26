@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Views.UCInformes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Border Background="#FFF5F5F5" CornerRadius="6" Padding="12">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       Text="{Binding TituloInforme}"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       Margin="0,0,0,10"/>
+
+            <StackPanel Grid.Row="1"
+                        Orientation="Horizontal"
+                        Margin="0,0,0,10">
+
+                <Button Content="Informe de Socios"
+                        Command="{Binding GenerarInformeSociosCommand}"
+                        Width="150"
+                        Margin="0,0,10,0"/>
+
+                <Button Content="Informe de Actividades"
+                        Command="{Binding GenerarInformeActividadesCommand}"
+                        Width="170"
+                        Margin="0,0,10,0"/>
+
+                <Button Content="Informe de Reservas"
+                        Command="{Binding GenerarInformeReservasCommand}"
+                        Width="150"
+                        Margin="0,0,10,0"/>
+
+                <ComboBox ItemsSource="{Binding Actividades}"
+                          SelectedValuePath="Id"
+                          DisplayMemberPath="Nombre"
+                          SelectedValue="{Binding SelectedActividadId}"
+                          Width="180"/>
+            </StackPanel>
+            <TextBlock Grid.Row="2"
+                       Text="Seleccione un informe para abrirlo en una nueva ventana."
+                       Opacity="0.6"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+        </Grid>
+    </Border>
+</UserControl>

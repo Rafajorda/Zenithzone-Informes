@@ -1,0 +1,28 @@
+<UserControl x:Class="Views.UCInicio"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#FFF5F5F5">
+        <!-- Contenedor centrado para la imagen -->
+        <Viewbox MaxWidth="600" MaxHeight="600" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Center"
+                 Margin="20">
+            <Image Source="/assets/zenithzone.png" 
+                   Stretch="Uniform"
+                   RenderOptions.BitmapScalingMode="HighQuality"/>
+        </Viewbox>
+        
+        <!-- Texto de bienvenida opcional -->
+        <TextBlock Text="Selecciona una opcion del menu para comenzar" 
+                   FontSize="16" 
+                   Foreground="#FF666666"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Bottom"
+                   Margin="0,0,0,30"/>
+    </Grid>
+</UserControl>

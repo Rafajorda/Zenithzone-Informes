@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsReservas" targetNamespace="http://tempuri.org/DsReservas.xsd" xmlns:mstns="http://tempuri.org/DsReservas.xsd" xmlns="http://tempuri.org/DsReservas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsReservas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DsReservas" msprop:Generator_DataSetName="DsReservas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Reservas" msprop:Generator_RowEvHandlerName="ReservasRowChangeEventHandler" msprop:Generator_RowDeletedName="ReservasRowDeleted" msprop:Generator_RowDeletingName="ReservasRowDeleting" msprop:Generator_RowEvArgName="ReservasRowChangeEvent" msprop:Generator_TablePropName="Reservas" msprop:Generator_RowChangedName="ReservasRowChanged" msprop:Generator_RowChangingName="ReservasRowChanging" msprop:Generator_TableClassName="ReservasDataTable" msprop:Generator_RowClassName="ReservasRow" msprop:Generator_TableVarName="tableReservas" msprop:Generator_UserTableName="Reservas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdSocio" msprop:Generator_ColumnPropNameInRow="IdSocio" msprop:Generator_ColumnPropNameInTable="IdSocioColumn" msprop:Generator_ColumnVarNameInTable="columnIdSocio" msprop:Generator_UserColumnName="IdSocio" type="xs:int" minOccurs="0" />
+              <xs:element name="Socio" msprop:Generator_ColumnPropNameInRow="Socio" msprop:Generator_ColumnPropNameInTable="SocioColumn" msprop:Generator_ColumnVarNameInTable="columnSocio" msprop:Generator_UserColumnName="Socio" type="xs:string" minOccurs="0" />
+              <xs:element name="Actividad" msprop:Generator_ColumnPropNameInRow="Actividad" msprop:Generator_ColumnPropNameInTable="ActividadColumn" msprop:Generator_ColumnVarNameInTable="columnActividad" msprop:Generator_UserColumnName="Actividad" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaReserva" msprop:Generator_ColumnPropNameInRow="FechaReserva" msprop:Generator_ColumnPropNameInTable="FechaReservaColumn" msprop:Generator_ColumnVarNameInTable="columnFechaReserva" msprop:Generator_UserColumnName="FechaReserva" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
