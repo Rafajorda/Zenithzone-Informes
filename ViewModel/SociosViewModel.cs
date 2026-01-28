@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Models;
 
 namespace ViewModel
 {
@@ -144,6 +145,13 @@ namespace ViewModel
                 return;
             }
 
+            // Validación: formato de email
+            if (!EsEmailValido(SelectedSocio.Email))
+            {
+                System.Windows.MessageBox.Show("El email no tiene un formato válido.", "Validación", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
+                return;
+            }
+
             try
             {
                 // Determinar si es inserción o actualización según el ID
@@ -155,7 +163,7 @@ namespace ViewModel
                 {
                     _repository.Update(SelectedSocio);
                 }
-                
+
                 // Recargar y limpiar selección
                 CargarSocios();
                 SelectedSocio = null;
@@ -165,6 +173,26 @@ namespace ViewModel
                 System.Windows.MessageBox.Show($"Error al guardar: {ex.Message}", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
             }
         }
+
+        /// <summary>
+        /// Valida el formato del email usando System.Net.Mail.MailAddress
+        /// </summary>
+        /// <param name="email">Email a validar</param>
+        /// <returns>True si el formato parece válido, False en caso contrario</returns>
+        private bool EsEmailValido(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email)) return false;
+            try
+            {
+                var addr = new MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
 
         /// <summary>
         /// Prepara el socio seleccionado para edición
