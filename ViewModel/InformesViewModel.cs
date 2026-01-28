@@ -14,14 +14,11 @@ namespace ViewModel
     /// <summary>
     /// ViewModel responsable de la generación de informes.
     /// Exponen comandos para solicitar distintos informes y un evento
-    /// que proporciona una fábrica (Func) para crear el ReportDocument cuando sea necesario.
     /// </summary>
     public class InformesViewModel : BaseViewModel
     {
-        //private ReportDocument _reporteActual;
         /// <summary>
         /// Evento que solicita al consumidor la creación y visualización de un informe.
-        /// Se usa una función (factory) para crear el ReportDocument en el hilo/ventana de UI.
         /// </summary>
         public event Action<Func<ReportDocument>> ReportRequested;
         private string _tituloInforme;
@@ -58,8 +55,6 @@ namespace ViewModel
                 OnPropertyChanged(nameof(Actividades));
             }
         }
-
-        // SelectedValuePath bind (Id)
         public int SelectedActividadId
         {
             get => _selectedActividadId;
@@ -141,7 +136,7 @@ namespace ViewModel
         {
             try
             {
-                // Pasamos una fábrica en lugar de crear el ReportDocument aquí.
+                
                 ReportRequested?.Invoke(() => CrearInformeSocios());
             }
             catch (Exception ex)
@@ -227,21 +222,5 @@ namespace ViewModel
                     System.Windows.MessageBoxImage.Error);
             }
         }
-
-        //private void SetAllParameters(ReportDocument rpt, string titulo)
-        //{
-        //    foreach (CrystalDecisions.Shared.ParameterField param in rpt.ParameterFields)
-        //    {
-        //        if (param.Name == "TituloInforme")
-        //        {
-        //            rpt.SetParameterValue(param.Name, titulo);
-        //        }
-        //        else
-        //        {
-        //            // Valor por defecto seguro
-        //            rpt.SetParameterValue(param.Name, "");
-        //        }
-        //    }
-        //}
     }
 }

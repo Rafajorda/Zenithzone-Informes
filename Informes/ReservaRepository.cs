@@ -6,7 +6,7 @@ namespace Informes
 {
     /// <summary>
     /// Repositorio para obtener reservas  (para informes)
-    /// Devuelve DsReservas.ReservassDataTable y rellena filas usando NewReservasRow
+    /// Devuelve DsReservas.ReservasDataTable y rellena filas usando NewReservasRow
     /// </summary>
     public class ReservaRepository
     {
