@@ -198,58 +198,173 @@ namespace ViewModel
         /// - Validación de regla de negocio: un socio solo puede tener una reserva por día
         /// - Validación de aforo: no se puede superar el aforo máximo de la actividad por día
         /// </summary>
+        //private void Guardar()
+        //{
+        //    if (SelectedReserva == null) return;
+
+        //    // Validación: socio obligatorio
+        //    if (SelectedReserva.SocioId == 0)
+        //    {
+        //        System.Windows.MessageBox.Show("Debe seleccionar un socio.", "Validación", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
+        //        return;
+        //    }
+
+        //    // Validación: actividad obligatoria
+        //    if (SelectedReserva.ActividadId == 0)
+        //    {
+        //        System.Windows.MessageBox.Show("Debe seleccionar una actividad.", "Validación", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
+        //        return;
+        //    }
+
+        //    // Validación de regla de negocio: un socio solo puede tener una reserva por día
+        //    // Si estamos editando, excluir la reserva actual de la validación
+        //    int? reservaIdExcluir = SelectedReserva.Id == 0 ? (int?)null : SelectedReserva.Id;
+        //    if (!_repository.ValidarReserva(SelectedReserva.SocioId, SelectedReserva.ActividadId, SelectedReserva.Fecha, reservaIdExcluir))
+        //    {
+        //        System.Windows.MessageBox.Show(
+        //            "El socio ya tiene una reserva para este día. No se permite más de una reserva por día.", 
+        //            "Validación", 
+        //            System.Windows.MessageBoxButton.OK, 
+        //            System.Windows.MessageBoxImage.Warning);
+        //        return;
+        //    }
+
+        //    // Validación de aforo: verificar que no se supere el aforo máximo de la actividad
+        //    if (!_repository.ValidarAforoDisponible(SelectedReserva.ActividadId, SelectedReserva.Fecha, reservaIdExcluir))
+        //    {
+        //        // Obtener información de la actividad para mostrar en el mensaje
+        //        var actividad = Actividades.FirstOrDefault(a => a.Id == SelectedReserva.ActividadId);
+        //        string nombreActividad = actividad?.Nombre ?? "la actividad seleccionada";
+        //        int aforoMaximo = actividad?.AforoMaximo ?? 0;
+
+        //        System.Windows.MessageBox.Show(
+        //            $"No hay aforo disponible para {nombreActividad} en la fecha seleccionada.\n" +
+        //            $"Aforo máximo: {aforoMaximo} persona(s) por día.\n" +
+        //            $"El aforo ya está completo para este día.",
+        //            "Aforo completo", 
+        //            System.Windows.MessageBoxButton.OK, 
+        //            System.Windows.MessageBoxImage.Warning);
+        //        return;
+        //    }
+
+        //    try
+        //    {
+        //        // Determinar si es inserción o actualización según el ID
+        //        if (SelectedReserva.Id == 0)
+        //        {
+        //            _repository.Add(SelectedReserva);
+        //        }
+        //        else
+        //        {
+        //            _repository.Update(SelectedReserva);
+        //        }
+
+        //        // Recargar y limpiar selección
+        //        CargarReservas();
+        //        SelectedReserva = null;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        System.Windows.MessageBox.Show($"Error al guardar: {ex.Message}", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+        //    }
+        //}
+
+
         private void Guardar()
         {
             if (SelectedReserva == null) return;
 
-            // Validación: socio obligatorio
+            if (!ValidateRequiredFields()) return;
+            if (!ValidateDateNotPast()) return;
+
+            int? reservaIdExcluir = SelectedReserva.Id == 0 ? (int?)null : SelectedReserva.Id;
+
+            if (!ValidateUniqueReservation(reservaIdExcluir)) return;
+            if (!ValidateAforoDisponible(reservaIdExcluir)) return;
+
+            SaveSelectedReserva();
+        }
+
+        /// <summary>
+        /// Comprueba que socio y actividad estén seleccionados; muestra mensajes en UI si faltan
+        /// </summary>
+        private bool ValidateRequiredFields()
+        {
             if (SelectedReserva.SocioId == 0)
             {
                 System.Windows.MessageBox.Show("Debe seleccionar un socio.", "Validación", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
-                return;
+                return false;
             }
 
-            // Validación: actividad obligatoria
             if (SelectedReserva.ActividadId == 0)
             {
                 System.Windows.MessageBox.Show("Debe seleccionar una actividad.", "Validación", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
-                return;
+                return false;
             }
 
-            // Validación de regla de negocio: un socio solo puede tener una reserva por día
-            // Si estamos editando, excluir la reserva actual de la validación
-            int? reservaIdExcluir = SelectedReserva.Id == 0 ? (int?)null : SelectedReserva.Id;
+            return true;
+        }
+
+        /// <summary>
+        /// Comprueba que la fecha no sea anterior a hoy; feedback inmediato en la UI
+        /// </summary>
+        public bool ValidateDateNotPast()
+        {
+            if (SelectedReserva.Fecha.Date < DateTime.Today)
+            {
+                System.Windows.MessageBox.Show("No puede crear/guardar una reserva en una fecha anterior a hoy.", "Validación de fecha", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Comprueba la regla: un socio solo puede tener una reserva por día
+        /// </summary>
+        private bool ValidateUniqueReservation(int? reservaIdExcluir)
+        {
             if (!_repository.ValidarReserva(SelectedReserva.SocioId, SelectedReserva.ActividadId, SelectedReserva.Fecha, reservaIdExcluir))
             {
                 System.Windows.MessageBox.Show(
-                    "El socio ya tiene una reserva para este día. No se permite más de una reserva por día.", 
-                    "Validación", 
-                    System.Windows.MessageBoxButton.OK, 
+                    "El socio ya tiene una reserva para este día. No se permite más de una reserva por día.",
+                    "Validación",
+                    System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Warning);
-                return;
+                return false;
             }
 
-            // Validación de aforo: verificar que no se supere el aforo máximo de la actividad
+            return true;
+        }
+
+        /// <summary>
+        /// Comprueba el aforo disponible para la actividad en la fecha seleccionada
+        /// </summary>
+        private bool ValidateAforoDisponible(int? reservaIdExcluir)
+        {
             if (!_repository.ValidarAforoDisponible(SelectedReserva.ActividadId, SelectedReserva.Fecha, reservaIdExcluir))
             {
                 // Obtener información de la actividad para mostrar en el mensaje
                 var actividad = Actividades.FirstOrDefault(a => a.Id == SelectedReserva.ActividadId);
                 string nombreActividad = actividad?.Nombre ?? "la actividad seleccionada";
                 int aforoMaximo = actividad?.AforoMaximo ?? 0;
-                
+
                 System.Windows.MessageBox.Show(
                     $"No hay aforo disponible para {nombreActividad} en la fecha seleccionada.\n" +
                     $"Aforo máximo: {aforoMaximo} persona(s) por día.\n" +
                     $"El aforo ya está completo para este día.",
-                    "Aforo completo", 
-                    System.Windows.MessageBoxButton.OK, 
+                    "Aforo completo",
+                    System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Warning);
-                return;
+                return false;
             }
 
+            return true;
+        }
+        private void SaveSelectedReserva()
+        {
             try
             {
-                // Determinar si es inserción o actualización según el ID
                 if (SelectedReserva.Id == 0)
                 {
                     _repository.Add(SelectedReserva);
@@ -258,7 +373,7 @@ namespace ViewModel
                 {
                     _repository.Update(SelectedReserva);
                 }
-                
+
                 // Recargar y limpiar selección
                 CargarReservas();
                 SelectedReserva = null;

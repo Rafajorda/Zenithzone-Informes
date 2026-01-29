@@ -179,7 +179,7 @@ namespace ViewModel
         /// </summary>
         /// <param name="email">Email a validar</param>
         /// <returns>True si el formato parece válido, False en caso contrario</returns>
-        private bool EsEmailValido(string email)
+        public bool EsEmailValido(string email)
         {
             if (string.IsNullOrWhiteSpace(email)) return false;
             try

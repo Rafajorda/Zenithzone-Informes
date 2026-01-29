@@ -91,9 +91,9 @@ namespace ViewModel
         {
             try
             {
-                using (var ctx = new zenithzoneEntities())
+                using (var entity = new zenithzoneEntities())
                 {
-                    var list = ctx.Actividad
+                    var list = entity.Actividad
                                   .OrderBy(a => a.Nombre)
                                   .ToList();
 
