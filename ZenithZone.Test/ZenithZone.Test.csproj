@@ -14,10 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Informes\Informes.csproj" />
-    <ProjectReference Include="..\Models\Models.csproj" />
-    <ProjectReference Include="..\ViewModel\ViewModel.csproj" />
-    <ProjectReference Include="..\Views\Views.csproj" />
+    <ProjectReference Include="..\Informes\ZenithZone.Informes.csproj" />
+    <ProjectReference Include="..\Models\ZenithZone.Models.csproj" />
+    <ProjectReference Include="..\ViewModel\ZenithZone.ViewModel.csproj" />
+    <ProjectReference Include="..\Views\ZenithZone.Views.csproj" />
   </ItemGroup>
 
   <ItemGroup>

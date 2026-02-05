@@ -67,9 +67,23 @@ namespace ViewModel
         public bool IsFormEnabled => SelectedSocio != null;
 
         // Comandos para las operaciones CRUD
+
+        /// <summary>
+        /// Agrega un nuevo socio
+        /// </summary>
         public ICommand AgregarSocCommand { get; }
+
+        /// <summary>
+        /// Guarda el socio actual (nuevo o modificado)
+        /// </summary>
         public ICommand GuardarSocCommand { get; }
+        /// <summary>
+        /// Edita el socio seleccionado
+        /// </summary>
         public ICommand EditarSocCommand { get; }
+        /// <summary>
+        /// Elimina el socio seleccionado
+        /// </summary>  
         public ICommand EliminarSocCommand { get; }
         public ICommand CancelarSocCommand { get; }
 
@@ -124,7 +138,7 @@ namespace ViewModel
         }
 
         /// <summary>
-        /// Guarda el socio currente (nuevo o modificado) en la base de datos
+        /// Guarda el socio current (nuevo o modificado) en la base de datos
         /// Realiza validaciones antes de guardar
         /// </summary>
         private void Guardar()

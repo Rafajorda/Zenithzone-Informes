@@ -232,17 +232,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj">
+    <ProjectReference Include="..\Models\ZenithZone.Models.csproj">
       <Project>{8354aa16-5c4d-49b6-bf4f-371834e5e636}</Project>
-      <Name>Models</Name>
+      <Name>ZenithZone.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Informes\Informes.csproj">
+    <ProjectReference Include="..\Informes\ZenithZone.Informes.csproj">
       <Project>{a778f12a-9fb3-4f8f-93ff-0c68c10dc068}</Project>
-      <Name>Informes</Name>
+      <Name>ZenithZone.Informes</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ViewModel\ViewModel.csproj">
+    <ProjectReference Include="..\ViewModel\ZenithZone.ViewModel.csproj">
       <Project>{56e91413-6e56-4a92-afcb-7b6871c7c375}</Project>
-      <Name>ViewModel</Name>
+      <Name>ZenithZone.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

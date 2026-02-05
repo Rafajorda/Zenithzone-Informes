@@ -1,0 +1,143 @@
+\doxysection{Models.\+Actividad\+Repository Class Reference}
+\hypertarget{class_models_1_1_actividad_repository}{}\label{class_models_1_1_actividad_repository}\index{Models.ActividadRepository@{Models.ActividadRepository}}
+
+
+Repositorio para gestionar las operaciones CRUD de Actividades Implementa el patrón Repository para abstraer el acceso a datos.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} $>$ \doxymbox{\hyperlink{class_models_1_1_actividad_repository_a630608487b2672ae0962b027c33ce730}{Get\+All}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene todas las actividades de la base de datos. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} \doxymbox{\hyperlink{class_models_1_1_actividad_repository_a7223d98644c493b1e3e89259f294a2f1}{Get\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Obtiene una actividad específica por su ID. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_models_1_1_actividad_repository_af8594483883beb5525a00c52234a10e4}{Add}} (\doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} actividad)
+\begin{DoxyCompactList}\small\item\em Agrega una nueva actividad a la base de datos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_models_1_1_actividad_repository_a468edefcccfd682beb7031b7235f40c8}{Update}} (\doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} actividad)
+\begin{DoxyCompactList}\small\item\em Actualiza una actividad existente en la base de datos. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_models_1_1_actividad_repository_a2d3dd3f034202e0946cb4fd43653a15e}{Tiene\+Reservas}} (int id)
+\begin{DoxyCompactList}\small\item\em Verifica si una actividad tiene reservas asociadas. \end{DoxyCompactList}\item 
+\Hypertarget{class_models_1_1_actividad_repository_a3b8bf40d3ad581d0fe18ec6ea9376afa}\label{class_models_1_1_actividad_repository_a3b8bf40d3ad581d0fe18ec6ea9376afa} 
+bool string mensaje {\bfseries Delete} (int id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_models_1_1_actividad_repository_ae3039f335484d3ef19a5b8fefed05176}{exito}}
+\begin{DoxyCompactList}\small\item\em Elimina una actividad de la base de datos Valida que la actividad no tenga reservas asociadas antes de eliminar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Repositorio para gestionar las operaciones CRUD de Actividades Implementa el patrón Repository para abstraer el acceso a datos. 
+
+\label{doc-func-members}
+\Hypertarget{class_models_1_1_actividad_repository_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_models_1_1_actividad_repository_af8594483883beb5525a00c52234a10e4}\index{Models.ActividadRepository@{Models.ActividadRepository}!Add@{Add}}
+\index{Add@{Add}!Models.ActividadRepository@{Models.ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{class_models_1_1_actividad_repository_af8594483883beb5525a00c52234a10e4} 
+void Models.\+Actividad\+Repository.\+Add (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}}}]{actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega una nueva actividad a la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actividad} & Objeto \doxylink{class_models_1_1_actividad}{Actividad} a agregar\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_models_1_1_actividad_repository_a630608487b2672ae0962b027c33ce730}\index{Models.ActividadRepository@{Models.ActividadRepository}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!Models.ActividadRepository@{Models.ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily \label{class_models_1_1_actividad_repository_a630608487b2672ae0962b027c33ce730} 
+List$<$ \doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} $>$ Models.\+Actividad\+Repository.\+Get\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene todas las actividades de la base de datos. 
+
+\begin{DoxyReturn}{Returns}
+Lista de todas las actividades
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_actividad_repository_a7223d98644c493b1e3e89259f294a2f1}\index{Models.ActividadRepository@{Models.ActividadRepository}!GetById@{GetById}}
+\index{GetById@{GetById}!Models.ActividadRepository@{Models.ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{GetById()}{GetById()}}
+{\footnotesize\ttfamily \label{class_models_1_1_actividad_repository_a7223d98644c493b1e3e89259f294a2f1} 
+\doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} Models.\+Actividad\+Repository.\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene una actividad específica por su ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único de la actividad\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La actividad encontrada o null si no existe
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_actividad_repository_a2d3dd3f034202e0946cb4fd43653a15e}\index{Models.ActividadRepository@{Models.ActividadRepository}!TieneReservas@{TieneReservas}}
+\index{TieneReservas@{TieneReservas}!Models.ActividadRepository@{Models.ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{TieneReservas()}{TieneReservas()}}
+{\footnotesize\ttfamily \label{class_models_1_1_actividad_repository_a2d3dd3f034202e0946cb4fd43653a15e} 
+bool Models.\+Actividad\+Repository.\+Tiene\+Reservas (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si una actividad tiene reservas asociadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único de la actividad\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la actividad tiene reservas, False en caso contrario
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_actividad_repository_a468edefcccfd682beb7031b7235f40c8}\index{Models.ActividadRepository@{Models.ActividadRepository}!Update@{Update}}
+\index{Update@{Update}!Models.ActividadRepository@{Models.ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_models_1_1_actividad_repository_a468edefcccfd682beb7031b7235f40c8} 
+void Models.\+Actividad\+Repository.\+Update (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}}}]{actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza una actividad existente en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actividad} & Objeto \doxylink{class_models_1_1_actividad}{Actividad} con los datos actualizados\\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_models_1_1_actividad_repository_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_models_1_1_actividad_repository_ae3039f335484d3ef19a5b8fefed05176}\index{Models.ActividadRepository@{Models.ActividadRepository}!exito@{exito}}
+\index{exito@{exito}!Models.ActividadRepository@{Models.ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{exito}{exito}}
+{\footnotesize\ttfamily \label{class_models_1_1_actividad_repository_ae3039f335484d3ef19a5b8fefed05176} 
+bool Models.\+Actividad\+Repository.\+exito}
+
+
+
+Elimina una actividad de la base de datos Valida que la actividad no tenga reservas asociadas antes de eliminar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único de la actividad a eliminar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con (éxito, mensaje):\+ true y mensaje vacío si se eliminó correctamente, false y mensaje de error si no se pudo eliminar
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Models/\+Actividad\+Repository.\+cs\end{DoxyCompactItemize}

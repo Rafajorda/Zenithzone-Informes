@@ -1,0 +1,25 @@
+\doxysection{View\+Model Namespace Reference}
+\hypertarget{namespace_view_model}{}\label{namespace_view_model}\index{ViewModel@{ViewModel}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Crystal\+Host}
+\item 
+class \doxymbox{\hyperlink{class_view_model_1_1_actividades_view_model}{Actividades\+View\+Model}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_view_model}{View\+Model} para la gestión de Actividades Maneja la lógica de negocio y la interacción entre la vista de actividades y el repositorio Implementa operaciones CRUD completas. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{Base\+View\+Model}}
+\begin{DoxyCompactList}\small\item\em Clase base abstracta para todos los View\+Models Implementa INotify\+Property\+Changed para el patrón MVVM Proporciona funcionalidad común para notificar cambios de propiedades a la vista. \end{DoxyCompactList}\item 
+interface \doxymbox{\hyperlink{interface_view_model_1_1_i_application_service}{IApplication\+Service}}
+\begin{DoxyCompactList}\small\item\em Interfaz que define servicios de la aplicación Permite al \doxylink{namespace_view_model}{View\+Model} comunicarse con funcionalidades de la aplicación sin dependencia directa Facilita el testing y mantiene la separación de responsabilidades del patrón MVVM. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_view_model_1_1_informes_view_model}{Informes\+View\+Model}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_view_model}{View\+Model} responsable de la generación de informes. Exponen comandos para solicitar distintos informes y un evento. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_view_model_1_1_inicio_view_model}{Inicio\+View\+Model}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_view_model}{View\+Model} para la pantalla de inicio/\+bienvenida Muestra la imagen del logo de \doxylink{namespace_zenith_zone}{Zenith\+Zone} cuando no hay ninguna secci�n seleccionada. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_view_model_1_1_main_view_model}{Main\+View\+Model}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_view_model}{View\+Model} principal de la aplicación Gestiona la navegación entre las diferentes vistas (Reservas, Actividades, Socios, \doxylink{namespace_informes}{Informes}) Implementa el patrón de navegación mediante cambio de \doxylink{namespace_view_model}{View\+Model} actual. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_view_model_1_1_relay_command}{Relay\+Command}}
+\begin{DoxyCompactList}\small\item\em Implementación reutilizable de ICommand para el patrón MVVM Permite enlazar acciones del \doxylink{namespace_view_model}{View\+Model} con controles de la Vista (botones, menús, etc.) Proporciona una forma sencilla de ejecutar lógica y controlar cuándo un comando está habilitado. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_view_model_1_1_reservas_view_model}{Reservas\+View\+Model}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_view_model}{View\+Model} para la gestión de Reservas Maneja la lógica de negocio compleja incluyendo validaciones de reglas de negocio Gestiona las relaciones entre Reservas, Socios y Actividades Implementa operaciones CRUD completas con validaciones. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_view_model_1_1_socios_view_model}{Socios\+View\+Model}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_view_model}{View\+Model} para la gestión de Socios Maneja la lógica de negocio y la interacción entre la vista de socios y el repositorio Implementa operaciones CRUD completas. \end{DoxyCompactList}\end{DoxyCompactItemize}

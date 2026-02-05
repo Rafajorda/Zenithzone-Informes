@@ -97,11 +97,33 @@ namespace ViewModel
         /// </summary>
         public bool IsFormEnabled => SelectedReserva != null;
 
-        // Comandos para las operaciones CRUD
+        /// <summary>
+        /// Acciones para los comandos CRUD
+        /// </summary>
+
+        /// <summary>
+        /// Agrega una nueva reserva
+        /// </summary>  
         public ICommand AgregarCommand { get; }
+
+        /// <summary>
+        ///  Edita la reserva seleccionada
+        /// </summary>
         public ICommand EditarCommand { get; }
+
+        /// <summary>
+        /// Guarda la reserva (nueva o editada) con validaciones
+        /// </summary>
         public ICommand GuardarCommand { get; }
+
+        /// <summary>
+        /// Elimina la reserva seleccionada
+        /// </summary>
         public ICommand EliminarCommand { get; }
+
+        /// <summary>
+        /// Cancela la operación actual y recarga los datos originales
+        /// </summary>
         public ICommand CancelarCommand { get; }
 
         /// <summary>

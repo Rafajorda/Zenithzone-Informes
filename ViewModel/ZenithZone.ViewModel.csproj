@@ -74,13 +74,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj">
+    <ProjectReference Include="..\Models\ZenithZone.Models.csproj">
       <Project>{8354aa16-5c4d-49b6-bf4f-371834e5e636}</Project>
-      <Name>Models</Name>
+      <Name>ZenithZone.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Informes\Informes.csproj">
+    <ProjectReference Include="..\Informes\ZenithZone.Informes.csproj">
       <Project>{A778F12A-9FB3-4F8F-93FF-0C68C10DC068}</Project>
-      <Name>Informes</Name>
+      <Name>ZenithZone.Informes</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

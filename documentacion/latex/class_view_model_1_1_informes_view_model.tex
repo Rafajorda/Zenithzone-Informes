@@ -1,0 +1,65 @@
+\doxysection{View\+Model.\+Informes\+View\+Model Class Reference}
+\hypertarget{class_view_model_1_1_informes_view_model}{}\label{class_view_model_1_1_informes_view_model}\index{ViewModel.InformesViewModel@{ViewModel.InformesViewModel}}
+
+
+\doxylink{namespace_view_model}{View\+Model} responsable de la generación de informes. Exponen comandos para solicitar distintos informes y un evento.  
+
+
+Inheritance diagram for View\+Model.\+Informes\+View\+Model:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_view_model_1_1_informes_view_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_informes_view_model_a1365c00b8b57f03a83dd96c68250839c}\label{class_view_model_1_1_informes_view_model_a1365c00b8b57f03a83dd96c68250839c} 
+{\bfseries Informes\+View\+Model} ()
+\begin{DoxyCompactList}\small\item\em Constructor:\+ inicializa comandos y carga lista de actividades. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_informes_view_model_ad1ee6fb4339d738e873bf4e0ed2fba62}\label{class_view_model_1_1_informes_view_model_ad1ee6fb4339d738e873bf4e0ed2fba62} 
+ICommand {\bfseries Generar\+Informe\+Socios\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+\Hypertarget{class_view_model_1_1_informes_view_model_a8a76565db998b9f7c64b5f4016064d10}\label{class_view_model_1_1_informes_view_model_a8a76565db998b9f7c64b5f4016064d10} 
+ICommand {\bfseries Generar\+Informe\+Actividades\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+\Hypertarget{class_view_model_1_1_informes_view_model_a6b5acf8ef06756cebec77474b42d8d6e}\label{class_view_model_1_1_informes_view_model_a6b5acf8ef06756cebec77474b42d8d6e} 
+ICommand {\bfseries Generar\+Informe\+Reservas\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+\Hypertarget{class_view_model_1_1_informes_view_model_a826a2d3b4af0ab913c17e44adeffb334}\label{class_view_model_1_1_informes_view_model_a826a2d3b4af0ab913c17e44adeffb334} 
+string {\bfseries Titulo\+Informe}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Título que se muestra en la UI para indicar el informe activo. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_informes_view_model_ad334671863b24ba3e489a32bb36e9e35}\label{class_view_model_1_1_informes_view_model_ad334671863b24ba3e489a32bb36e9e35} 
+Observable\+Collection$<$ \doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} $>$ {\bfseries Actividades}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Colección de actividades disponibles para filtrar informes. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_informes_view_model_a340e22ae93ebcdfd8096f7d89d3151d6}\label{class_view_model_1_1_informes_view_model_a340e22ae93ebcdfd8096f7d89d3151d6} 
+int {\bfseries Selected\+Actividad\+Id}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_informes_view_model_ae3a07cb1944aa73ceff08c5b1537bcb4}\label{class_view_model_1_1_informes_view_model_ae3a07cb1944aa73ceff08c5b1537bcb4} 
+Action$<$ Func$<$ Report\+Document $>$ $>$ {\bfseries Report\+Requested}
+\begin{DoxyCompactList}\small\item\em Evento que solicita al consumidor la creación y visualización de un informe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\begin{DoxyCompactList}\small\item\em Evento que se dispara cuando una propiedad cambia su valor Permite que la interfaz de usuario se actualice automáticamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_view_model_1_1_base_view_model_a21d4f5950f0d07daa9c9ecaa8f1eda63}{On\+Property\+Changed}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Método protegido para notificar cambios en las propiedades Debe ser llamado en el setter de cada propiedad que afecte a la vista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_view_model}{View\+Model} responsable de la generación de informes. Exponen comandos para solicitar distintos informes y un evento. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+View\+Model/\+Informes\+View\+Model.\+cs\end{DoxyCompactItemize}

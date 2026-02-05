@@ -1,0 +1,189 @@
+\doxysection{Models.\+Reserva\+Repository Class Reference}
+\hypertarget{class_models_1_1_reserva_repository}{}\label{class_models_1_1_reserva_repository}\index{Models.ReservaRepository@{Models.ReservaRepository}}
+
+
+Repositorio para gestionar las operaciones CRUD de Reservas Implementa el patrón Repository para abstraer el acceso a datos Incluye validaciones de negocio y consultas relacionadas.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \doxymbox{\hyperlink{class_models_1_1_reserva}{Reserva}} $>$ \doxymbox{\hyperlink{class_models_1_1_reserva_repository_a1ce4b7102f33c0eaec63a0304eedd505}{Get\+All}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene todas las reservas con sus relaciones (\doxylink{class_models_1_1_socio}{Socio} y \doxylink{class_models_1_1_actividad}{Actividad}) cargadas. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_models_1_1_reserva}{Reserva}} \doxymbox{\hyperlink{class_models_1_1_reserva_repository_a24d36070f618c059bb094b008fe60a65}{Get\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Obtiene una reserva específica por su ID con sus relaciones cargadas. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_models_1_1_reserva_repository_aba5f3c520ee80ff1a4928c23054e4d40}{Validar\+Reserva}} (int socio\+Id, int actividad\+Id, Date\+Time fecha, int? reserva\+Id\+Excluir=null)
+\begin{DoxyCompactList}\small\item\em Valida si un socio puede hacer una reserva en una fecha específica Regla de negocio:\+ Un socio solo puede tener una reserva por día. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_models_1_1_reserva_repository_ae0d74ce01f49bde2c1e3eb494763dfed}{Validar\+Aforo\+Disponible}} (int actividad\+Id, Date\+Time fecha, int? reserva\+Id\+Excluir=null)
+\begin{DoxyCompactList}\small\item\em Valida si hay aforo disponible para una actividad en una fecha específica Regla de negocio:\+ No se pueden hacer más reservas que el aforo máximo de la actividad por día. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_models_1_1_reserva_repository_a14c72e99f02178fab4a2550f592d6363}{Add}} (\doxymbox{\hyperlink{class_models_1_1_reserva}{Reserva}} reserva)
+\begin{DoxyCompactList}\small\item\em Agrega una nueva reserva a la base de datos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_models_1_1_reserva_repository_a1c0cc0e4ce0bf6eb168ac5dfcb4940e7}{Update}} (\doxymbox{\hyperlink{class_models_1_1_reserva}{Reserva}} reserva)
+\begin{DoxyCompactList}\small\item\em Actualiza una reserva existente en la base de datos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_models_1_1_reserva_repository_a1b0d1e1760b4d855bab4c80cd2d9d8b9}{Delete}} (int id)
+\begin{DoxyCompactList}\small\item\em Elimina una reserva de la base de datos. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} $>$ \doxymbox{\hyperlink{class_models_1_1_reserva_repository_a9cd36b13767427736e0d585b6e649037}{Get\+Socios\+Activos}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de socios activos para mostrar en el Combo\+Box. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} $>$ \doxymbox{\hyperlink{class_models_1_1_reserva_repository_abd513752b93feda4ffa776df678c7459}{Get\+All\+Actividades}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene todas las actividades disponibles para mostrar en el Combo\+Box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Repositorio para gestionar las operaciones CRUD de Reservas Implementa el patrón Repository para abstraer el acceso a datos Incluye validaciones de negocio y consultas relacionadas. 
+
+\label{doc-func-members}
+\Hypertarget{class_models_1_1_reserva_repository_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_models_1_1_reserva_repository_a14c72e99f02178fab4a2550f592d6363}\index{Models.ReservaRepository@{Models.ReservaRepository}!Add@{Add}}
+\index{Add@{Add}!Models.ReservaRepository@{Models.ReservaRepository}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{class_models_1_1_reserva_repository_a14c72e99f02178fab4a2550f592d6363} 
+void Models.\+Reserva\+Repository.\+Add (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_models_1_1_reserva}{Reserva}}}]{reserva}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega una nueva reserva a la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reserva} & Objeto \doxylink{class_models_1_1_reserva}{Reserva} a agregar\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_models_1_1_reserva_repository_a1b0d1e1760b4d855bab4c80cd2d9d8b9}\index{Models.ReservaRepository@{Models.ReservaRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Models.ReservaRepository@{Models.ReservaRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily \label{class_models_1_1_reserva_repository_a1b0d1e1760b4d855bab4c80cd2d9d8b9} 
+void Models.\+Reserva\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina una reserva de la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único de la reserva a eliminar\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_models_1_1_reserva_repository_a1ce4b7102f33c0eaec63a0304eedd505}\index{Models.ReservaRepository@{Models.ReservaRepository}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!Models.ReservaRepository@{Models.ReservaRepository}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily \label{class_models_1_1_reserva_repository_a1ce4b7102f33c0eaec63a0304eedd505} 
+List$<$ \doxymbox{\hyperlink{class_models_1_1_reserva}{Reserva}} $>$ Models.\+Reserva\+Repository.\+Get\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene todas las reservas con sus relaciones (\doxylink{class_models_1_1_socio}{Socio} y \doxylink{class_models_1_1_actividad}{Actividad}) cargadas. 
+
+\begin{DoxyReturn}{Returns}
+Lista de todas las reservas con navegación eager loading
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_reserva_repository_abd513752b93feda4ffa776df678c7459}\index{Models.ReservaRepository@{Models.ReservaRepository}!GetAllActividades@{GetAllActividades}}
+\index{GetAllActividades@{GetAllActividades}!Models.ReservaRepository@{Models.ReservaRepository}}
+\doxysubsubsection{\texorpdfstring{GetAllActividades()}{GetAllActividades()}}
+{\footnotesize\ttfamily \label{class_models_1_1_reserva_repository_abd513752b93feda4ffa776df678c7459} 
+List$<$ \doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} $>$ Models.\+Reserva\+Repository.\+Get\+All\+Actividades (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene todas las actividades disponibles para mostrar en el Combo\+Box. 
+
+\begin{DoxyReturn}{Returns}
+Lista de todas las actividades
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_reserva_repository_a24d36070f618c059bb094b008fe60a65}\index{Models.ReservaRepository@{Models.ReservaRepository}!GetById@{GetById}}
+\index{GetById@{GetById}!Models.ReservaRepository@{Models.ReservaRepository}}
+\doxysubsubsection{\texorpdfstring{GetById()}{GetById()}}
+{\footnotesize\ttfamily \label{class_models_1_1_reserva_repository_a24d36070f618c059bb094b008fe60a65} 
+\doxymbox{\hyperlink{class_models_1_1_reserva}{Reserva}} Models.\+Reserva\+Repository.\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene una reserva específica por su ID con sus relaciones cargadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único de la reserva\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La reserva encontrada o null si no existe
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_reserva_repository_a9cd36b13767427736e0d585b6e649037}\index{Models.ReservaRepository@{Models.ReservaRepository}!GetSociosActivos@{GetSociosActivos}}
+\index{GetSociosActivos@{GetSociosActivos}!Models.ReservaRepository@{Models.ReservaRepository}}
+\doxysubsubsection{\texorpdfstring{GetSociosActivos()}{GetSociosActivos()}}
+{\footnotesize\ttfamily \label{class_models_1_1_reserva_repository_a9cd36b13767427736e0d585b6e649037} 
+List$<$ \doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} $>$ Models.\+Reserva\+Repository.\+Get\+Socios\+Activos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la lista de socios activos para mostrar en el Combo\+Box. 
+
+\begin{DoxyReturn}{Returns}
+Lista de socios con estado Activo = true
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_reserva_repository_a1c0cc0e4ce0bf6eb168ac5dfcb4940e7}\index{Models.ReservaRepository@{Models.ReservaRepository}!Update@{Update}}
+\index{Update@{Update}!Models.ReservaRepository@{Models.ReservaRepository}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_models_1_1_reserva_repository_a1c0cc0e4ce0bf6eb168ac5dfcb4940e7} 
+void Models.\+Reserva\+Repository.\+Update (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_models_1_1_reserva}{Reserva}}}]{reserva}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza una reserva existente en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reserva} & Objeto \doxylink{class_models_1_1_reserva}{Reserva} con los datos actualizados\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_models_1_1_reserva_repository_ae0d74ce01f49bde2c1e3eb494763dfed}\index{Models.ReservaRepository@{Models.ReservaRepository}!ValidarAforoDisponible@{ValidarAforoDisponible}}
+\index{ValidarAforoDisponible@{ValidarAforoDisponible}!Models.ReservaRepository@{Models.ReservaRepository}}
+\doxysubsubsection{\texorpdfstring{ValidarAforoDisponible()}{ValidarAforoDisponible()}}
+{\footnotesize\ttfamily \label{class_models_1_1_reserva_repository_ae0d74ce01f49bde2c1e3eb494763dfed} 
+bool Models.\+Reserva\+Repository.\+Validar\+Aforo\+Disponible (\begin{DoxyParamCaption}\item[{int}]{actividad\+Id}{, }\item[{Date\+Time}]{fecha}{, }\item[{int?}]{reserva\+Id\+Excluir}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Valida si hay aforo disponible para una actividad en una fecha específica Regla de negocio:\+ No se pueden hacer más reservas que el aforo máximo de la actividad por día. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actividad\+Id} & ID de la actividad\\
+\hline
+{\em fecha} & Fecha de la reserva\\
+\hline
+{\em reserva\+Id\+Excluir} & ID de reserva a excluir (para validar en edición)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si hay aforo disponible, False si se alcanzó el aforo máximo
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_reserva_repository_aba5f3c520ee80ff1a4928c23054e4d40}\index{Models.ReservaRepository@{Models.ReservaRepository}!ValidarReserva@{ValidarReserva}}
+\index{ValidarReserva@{ValidarReserva}!Models.ReservaRepository@{Models.ReservaRepository}}
+\doxysubsubsection{\texorpdfstring{ValidarReserva()}{ValidarReserva()}}
+{\footnotesize\ttfamily \label{class_models_1_1_reserva_repository_aba5f3c520ee80ff1a4928c23054e4d40} 
+bool Models.\+Reserva\+Repository.\+Validar\+Reserva (\begin{DoxyParamCaption}\item[{int}]{socio\+Id}{, }\item[{int}]{actividad\+Id}{, }\item[{Date\+Time}]{fecha}{, }\item[{int?}]{reserva\+Id\+Excluir}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Valida si un socio puede hacer una reserva en una fecha específica Regla de negocio:\+ Un socio solo puede tener una reserva por día. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socio\+Id} & ID del socio\\
+\hline
+{\em actividad\+Id} & ID de la actividad\\
+\hline
+{\em fecha} & Fecha de la reserva\\
+\hline
+{\em reserva\+Id\+Excluir} & ID de reserva a excluir (para validar en edición)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la reserva es válida, False si ya existe una reserva para ese socio en esa fecha
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Models/\+Reserva\+Repository.\+cs\end{DoxyCompactItemize}

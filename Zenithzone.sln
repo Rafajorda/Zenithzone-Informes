@@ -2,13 +2,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36717.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{8354AA16-5C4D-49B6-BF4F-371834E5E636}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenithZone.Models", "Models\ZenithZone.Models.csproj", "{8354AA16-5C4D-49B6-BF4F-371834E5E636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{56E91413-6E56-4A92-AFCB-7B6871C7C375}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenithZone.ViewModel", "ViewModel\ZenithZone.ViewModel.csproj", "{56E91413-6E56-4A92-AFCB-7B6871C7C375}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informes", "Informes\Informes.csproj", "{A778F12A-9FB3-4F8F-93FF-0C68C10DC068}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenithZone.Informes", "Informes\ZenithZone.Informes.csproj", "{A778F12A-9FB3-4F8F-93FF-0C68C10DC068}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{E46A4C87-F885-44B5-B968-3F91064BBADA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenithZone.Views", "Views\ZenithZone.Views.csproj", "{E46A4C87-F885-44B5-B968-3F91064BBADA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenithZone.Test", "ZenithZone.Test\ZenithZone.Test.csproj", "{646285C5-D6C4-413D-B87A-79A60C11E5B7}"
 EndProject

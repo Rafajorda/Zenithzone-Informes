@@ -1,0 +1,52 @@
+\doxysection{View\+Model.\+Base\+View\+Model Class Reference}
+\hypertarget{class_view_model_1_1_base_view_model}{}\label{class_view_model_1_1_base_view_model}\index{ViewModel.BaseViewModel@{ViewModel.BaseViewModel}}
+
+
+Clase base abstracta para todos los View\+Models Implementa INotify\+Property\+Changed para el patrón MVVM Proporciona funcionalidad común para notificar cambios de propiedades a la vista.  
+
+
+Inheritance diagram for View\+Model.\+Base\+View\+Model:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.296296cm]{class_view_model_1_1_base_view_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_view_model_1_1_base_view_model_a21d4f5950f0d07daa9c9ecaa8f1eda63}{On\+Property\+Changed}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Método protegido para notificar cambios en las propiedades Debe ser llamado en el setter de cada propiedad que afecte a la vista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_base_view_model_ae08e4c2de2215e5207b143556d58357e}\label{class_view_model_1_1_base_view_model_ae08e4c2de2215e5207b143556d58357e} 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\begin{DoxyCompactList}\small\item\em Evento que se dispara cuando una propiedad cambia su valor Permite que la interfaz de usuario se actualice automáticamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase base abstracta para todos los View\+Models Implementa INotify\+Property\+Changed para el patrón MVVM Proporciona funcionalidad común para notificar cambios de propiedades a la vista. 
+
+\label{doc-func-members}
+\Hypertarget{class_view_model_1_1_base_view_model_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_view_model_1_1_base_view_model_a21d4f5950f0d07daa9c9ecaa8f1eda63}\index{ViewModel.BaseViewModel@{ViewModel.BaseViewModel}!OnPropertyChanged@{OnPropertyChanged}}
+\index{OnPropertyChanged@{OnPropertyChanged}!ViewModel.BaseViewModel@{ViewModel.BaseViewModel}}
+\doxysubsubsection{\texorpdfstring{OnPropertyChanged()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily \label{class_view_model_1_1_base_view_model_a21d4f5950f0d07daa9c9ecaa8f1eda63} 
+void View\+Model.\+Base\+View\+Model.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{string}]{property\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Método protegido para notificar cambios en las propiedades Debe ser llamado en el setter de cada propiedad que afecte a la vista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & Nombre de la propiedad que cambió\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+View\+Model/\+Base\+View\+Model.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\doxysection{View\+Model.\+Main\+View\+Model Class Reference}
+\hypertarget{class_view_model_1_1_main_view_model}{}\label{class_view_model_1_1_main_view_model}\index{ViewModel.MainViewModel@{ViewModel.MainViewModel}}
+
+
+\doxylink{namespace_view_model}{View\+Model} principal de la aplicación Gestiona la navegación entre las diferentes vistas (Reservas, Actividades, Socios, \doxylink{namespace_informes}{Informes}) Implementa el patrón de navegación mediante cambio de \doxylink{namespace_view_model}{View\+Model} actual.  
+
+
+Inheritance diagram for View\+Model.\+Main\+View\+Model:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_view_model_1_1_main_view_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_main_view_model_a12809a9e95cf985d9d01820ebdf2c71d}\label{class_view_model_1_1_main_view_model_a12809a9e95cf985d9d01820ebdf2c71d} 
+{\bfseries Main\+View\+Model} ()
+\begin{DoxyCompactList}\small\item\em Constructor del \doxylink{class_view_model_1_1_main_view_model}{Main\+View\+Model} Inicializa todos los comandos de navegación y establece la vista inicial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_main_view_model_a84771e0b189260c7f52f548c0ebe3716}\label{class_view_model_1_1_main_view_model_a84771e0b189260c7f52f548c0ebe3716} 
+\doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{Base\+View\+Model}} {\bfseries Current\+View\+Model}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_view_model}{View\+Model} actualmente visible en la vista principal Al cambiar esta propiedad, la vista se actualiza automáticamente para mostrar el contenido correspondiente. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_main_view_model_a888087f5ed157a8f5f9a0eba2eab182c}\label{class_view_model_1_1_main_view_model_a888087f5ed157a8f5f9a0eba2eab182c} 
+ICommand {\bfseries Show\+Reservas\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para navegar a la vista de Reservas. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_main_view_model_a1a0b4c973f8c1a2f0d3aa6a5bad8d087}\label{class_view_model_1_1_main_view_model_a1a0b4c973f8c1a2f0d3aa6a5bad8d087} 
+ICommand {\bfseries Show\+Actividades\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para navegar a la vista de Actividades. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_main_view_model_a8581d0884a7a34a365947cdf4da21240}\label{class_view_model_1_1_main_view_model_a8581d0884a7a34a365947cdf4da21240} 
+ICommand {\bfseries Show\+Socios\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para navegar a la vista de Socios. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_main_view_model_a3e954effb206762fc8b0f6b37f653a36}\label{class_view_model_1_1_main_view_model_a3e954effb206762fc8b0f6b37f653a36} 
+ICommand {\bfseries Show\+Informes\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para navegar a la vista de \doxylink{namespace_informes}{Informes}. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_main_view_model_a5c182be4c840c0857f4e6ac9fcbac024}\label{class_view_model_1_1_main_view_model_a5c182be4c840c0857f4e6ac9fcbac024} 
+ICommand {\bfseries Salir\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para cerrar la aplicación. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_view_model_1_1_base_view_model_a21d4f5950f0d07daa9c9ecaa8f1eda63}{On\+Property\+Changed}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Método protegido para notificar cambios en las propiedades Debe ser llamado en el setter de cada propiedad que afecte a la vista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\begin{DoxyCompactList}\small\item\em Evento que se dispara cuando una propiedad cambia su valor Permite que la interfaz de usuario se actualice automáticamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_view_model}{View\+Model} principal de la aplicación Gestiona la navegación entre las diferentes vistas (Reservas, Actividades, Socios, \doxylink{namespace_informes}{Informes}) Implementa el patrón de navegación mediante cambio de \doxylink{namespace_view_model}{View\+Model} actual. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+View\+Model/\+Main\+View\+Model.\+cs\end{DoxyCompactItemize}

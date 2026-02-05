@@ -1,0 +1,93 @@
+\doxysection{View\+Model.\+Socios\+View\+Model Class Reference}
+\hypertarget{class_view_model_1_1_socios_view_model}{}\label{class_view_model_1_1_socios_view_model}\index{ViewModel.SociosViewModel@{ViewModel.SociosViewModel}}
+
+
+\doxylink{namespace_view_model}{View\+Model} para la gestión de Socios Maneja la lógica de negocio y la interacción entre la vista de socios y el repositorio Implementa operaciones CRUD completas.  
+
+
+Inheritance diagram for View\+Model.\+Socios\+View\+Model:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_view_model_1_1_socios_view_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_socios_view_model_a8950afeb105fe513951654f79f479ddc}\label{class_view_model_1_1_socios_view_model_a8950afeb105fe513951654f79f479ddc} 
+{\bfseries Socios\+View\+Model} ()
+\begin{DoxyCompactList}\small\item\em Constructor del \doxylink{class_view_model_1_1_socios_view_model}{Socios\+View\+Model} Inicializa el repositorio, los comandos y carga los datos iniciales. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_view_model_1_1_socios_view_model_aac6d852ef52bdbce12c9ed2911586c80}{Es\+Email\+Valido}} (string email)
+\begin{DoxyCompactList}\small\item\em Valida el formato del email usando System.\+Net.\+Mail.\+Mail\+Address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_socios_view_model_a3df105f924b304ce29828fe338c14a1a}\label{class_view_model_1_1_socios_view_model_a3df105f924b304ce29828fe338c14a1a} 
+Observable\+Collection$<$ \doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} $>$ {\bfseries Socios}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Colección observable de todos los socios Se actualiza automáticamente en la vista cuando cambia. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_socios_view_model_a738a57653d478936ff78ba4972488df6}\label{class_view_model_1_1_socios_view_model_a738a57653d478936ff78ba4972488df6} 
+\doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} {\bfseries Selected\+Socio}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_models_1_1_socio}{Socio} actualmente seleccionado en el Data\+Grid Controla el estado del formulario y los comandos disponibles. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_socios_view_model_a269631f8368d132a52919f8c26acf149}\label{class_view_model_1_1_socios_view_model_a269631f8368d132a52919f8c26acf149} 
+bool {\bfseries Is\+Editing\+Existing\+Socio}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Indica si se está editando un socio existente (Id != 0). \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_socios_view_model_ad763d829096c06568d37d916082796f8}\label{class_view_model_1_1_socios_view_model_ad763d829096c06568d37d916082796f8} 
+bool {\bfseries Is\+Form\+Enabled}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Indica si el formulario debe estar habilitado. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_socios_view_model_abca1dcf74297501fbfa9ac2019194061}\label{class_view_model_1_1_socios_view_model_abca1dcf74297501fbfa9ac2019194061} 
+ICommand {\bfseries Agregar\+Soc\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Agrega un nuevo socio. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_socios_view_model_a849a95eeae026523656c0f944bb04e93}\label{class_view_model_1_1_socios_view_model_a849a95eeae026523656c0f944bb04e93} 
+ICommand {\bfseries Guardar\+Soc\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Guarda el socio actual (nuevo o modificado). \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_socios_view_model_a641e2b4f97f74f69ad2b86004272e6ec}\label{class_view_model_1_1_socios_view_model_a641e2b4f97f74f69ad2b86004272e6ec} 
+ICommand {\bfseries Editar\+Soc\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Edita el socio seleccionado. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_socios_view_model_a052b4c079aa2d889b7f783de2d0b724f}\label{class_view_model_1_1_socios_view_model_a052b4c079aa2d889b7f783de2d0b724f} 
+ICommand {\bfseries Eliminar\+Soc\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Elimina el socio seleccionado. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_socios_view_model_af13f6b1cc4f97f3bb5059466d5640974}\label{class_view_model_1_1_socios_view_model_af13f6b1cc4f97f3bb5059466d5640974} 
+ICommand {\bfseries Cancelar\+Soc\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_view_model_1_1_base_view_model_a21d4f5950f0d07daa9c9ecaa8f1eda63}{On\+Property\+Changed}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Método protegido para notificar cambios en las propiedades Debe ser llamado en el setter de cada propiedad que afecte a la vista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\begin{DoxyCompactList}\small\item\em Evento que se dispara cuando una propiedad cambia su valor Permite que la interfaz de usuario se actualice automáticamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_view_model}{View\+Model} para la gestión de Socios Maneja la lógica de negocio y la interacción entre la vista de socios y el repositorio Implementa operaciones CRUD completas. 
+
+\label{doc-func-members}
+\Hypertarget{class_view_model_1_1_socios_view_model_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_view_model_1_1_socios_view_model_aac6d852ef52bdbce12c9ed2911586c80}\index{ViewModel.SociosViewModel@{ViewModel.SociosViewModel}!EsEmailValido@{EsEmailValido}}
+\index{EsEmailValido@{EsEmailValido}!ViewModel.SociosViewModel@{ViewModel.SociosViewModel}}
+\doxysubsubsection{\texorpdfstring{EsEmailValido()}{EsEmailValido()}}
+{\footnotesize\ttfamily \label{class_view_model_1_1_socios_view_model_aac6d852ef52bdbce12c9ed2911586c80} 
+bool View\+Model.\+Socios\+View\+Model.\+Es\+Email\+Valido (\begin{DoxyParamCaption}\item[{string}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Valida el formato del email usando System.\+Net.\+Mail.\+Mail\+Address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Email a validar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si el formato parece válido, False en caso contrario
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+View\+Model/\+Socios\+View\+Model.\+cs\end{DoxyCompactItemize}

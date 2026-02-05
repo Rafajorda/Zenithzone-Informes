@@ -1,0 +1,91 @@
+\doxysection{View\+Model.\+Reservas\+View\+Model Class Reference}
+\hypertarget{class_view_model_1_1_reservas_view_model}{}\label{class_view_model_1_1_reservas_view_model}\index{ViewModel.ReservasViewModel@{ViewModel.ReservasViewModel}}
+
+
+\doxylink{namespace_view_model}{View\+Model} para la gestión de Reservas Maneja la lógica de negocio compleja incluyendo validaciones de reglas de negocio Gestiona las relaciones entre Reservas, Socios y Actividades Implementa operaciones CRUD completas con validaciones.  
+
+
+Inheritance diagram for View\+Model.\+Reservas\+View\+Model:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_view_model_1_1_reservas_view_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_a72b260085a32c7837b48c056a5ee8afe}\label{class_view_model_1_1_reservas_view_model_a72b260085a32c7837b48c056a5ee8afe} 
+{\bfseries Reservas\+View\+Model} ()
+\begin{DoxyCompactList}\small\item\em Constructor del \doxylink{class_view_model_1_1_reservas_view_model}{Reservas\+View\+Model} Inicializa el repositorio, los comandos y carga todos los datos necesarios. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_ac076c8c635fc9f4ea48b9dfaa505b0d1}\label{class_view_model_1_1_reservas_view_model_ac076c8c635fc9f4ea48b9dfaa505b0d1} 
+bool {\bfseries Validate\+Date\+Not\+Past} ()
+\begin{DoxyCompactList}\small\item\em Comprueba que la fecha no sea anterior a hoy; feedback inmediato en la UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_a2a71aa93d0065e24c7dba65125779d6b}\label{class_view_model_1_1_reservas_view_model_a2a71aa93d0065e24c7dba65125779d6b} 
+Observable\+Collection$<$ \doxymbox{\hyperlink{class_models_1_1_reserva}{Reserva}} $>$ {\bfseries Reservas}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Colección observable de todas las reservas con sus relaciones cargadas Se actualiza automáticamente en la vista cuando cambia. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_ab214b38ce00c5e0775d88cf56cbe0663}\label{class_view_model_1_1_reservas_view_model_ab214b38ce00c5e0775d88cf56cbe0663} 
+\doxymbox{\hyperlink{class_models_1_1_reserva}{Reserva}} {\bfseries Selected\+Reserva}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_models_1_1_reserva}{Reserva} actualmente seleccionada en el Data\+Grid Controla el estado del formulario y los comandos disponibles. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_ad4c3f260664be7c22c3548e6cddf3113}\label{class_view_model_1_1_reservas_view_model_ad4c3f260664be7c22c3548e6cddf3113} 
+Observable\+Collection$<$ \doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} $>$ {\bfseries Socios}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Colección de socios activos para el Combo\+Box Solo incluye socios con estado Activo = true. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_a4b70942f24fbad38ad4456ec63016da1}\label{class_view_model_1_1_reservas_view_model_a4b70942f24fbad38ad4456ec63016da1} 
+Observable\+Collection$<$ \doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} $>$ {\bfseries Actividades}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Colección de actividades disponibles para el Combo\+Box. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_a18617c3bd3ca8a3fa51b6a8f444bf800}\label{class_view_model_1_1_reservas_view_model_a18617c3bd3ca8a3fa51b6a8f444bf800} 
+bool {\bfseries Is\+Editing\+Existing\+Reserva}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Indica si se está editando una reserva existente (Id != 0). \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_ab6c028929e79f5bad365fbd6315c0e23}\label{class_view_model_1_1_reservas_view_model_ab6c028929e79f5bad365fbd6315c0e23} 
+bool {\bfseries Is\+Form\+Enabled}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Indica si el formulario debe estar habilitado. \end{DoxyCompactList}\item 
+ICommand \doxymbox{\hyperlink{class_view_model_1_1_reservas_view_model_a6f1ddec1f2fef7f794877c7e8849be2b}{Agregar\+Command}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Acciones para los comandos CRUD. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_a2fa1586a7da4a1d5c78b5fa279915a7d}\label{class_view_model_1_1_reservas_view_model_a2fa1586a7da4a1d5c78b5fa279915a7d} 
+ICommand {\bfseries Editar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Edita la reserva seleccionada. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_add771f9302bfe1d6c0d6d8d9508f6472}\label{class_view_model_1_1_reservas_view_model_add771f9302bfe1d6c0d6d8d9508f6472} 
+ICommand {\bfseries Guardar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Guarda la reserva (nueva o editada) con validaciones. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_a916f7f6109b20ff4ebdd8796819f36a5}\label{class_view_model_1_1_reservas_view_model_a916f7f6109b20ff4ebdd8796819f36a5} 
+ICommand {\bfseries Eliminar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Elimina la reserva seleccionada. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_reservas_view_model_a5f95b656ce5d469e4f7e1aef4cde8d05}\label{class_view_model_1_1_reservas_view_model_a5f95b656ce5d469e4f7e1aef4cde8d05} 
+ICommand {\bfseries Cancelar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Cancela la operación actual y recarga los datos originales. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_view_model_1_1_base_view_model_a21d4f5950f0d07daa9c9ecaa8f1eda63}{On\+Property\+Changed}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Método protegido para notificar cambios en las propiedades Debe ser llamado en el setter de cada propiedad que afecte a la vista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\begin{DoxyCompactList}\small\item\em Evento que se dispara cuando una propiedad cambia su valor Permite que la interfaz de usuario se actualice automáticamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_view_model}{View\+Model} para la gestión de Reservas Maneja la lógica de negocio compleja incluyendo validaciones de reglas de negocio Gestiona las relaciones entre Reservas, Socios y Actividades Implementa operaciones CRUD completas con validaciones. 
+
+\label{doc-property-members}
+\Hypertarget{class_view_model_1_1_reservas_view_model_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_view_model_1_1_reservas_view_model_a6f1ddec1f2fef7f794877c7e8849be2b}\index{ViewModel.ReservasViewModel@{ViewModel.ReservasViewModel}!AgregarCommand@{AgregarCommand}}
+\index{AgregarCommand@{AgregarCommand}!ViewModel.ReservasViewModel@{ViewModel.ReservasViewModel}}
+\doxysubsubsection{\texorpdfstring{AgregarCommand}{AgregarCommand}}
+{\footnotesize\ttfamily \label{class_view_model_1_1_reservas_view_model_a6f1ddec1f2fef7f794877c7e8849be2b} 
+ICommand View\+Model.\+Reservas\+View\+Model.\+Agregar\+Command\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Acciones para los comandos CRUD. 
+
+Agrega una nueva reserva 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+View\+Model/\+Reservas\+View\+Model.\+cs\end{DoxyCompactItemize}

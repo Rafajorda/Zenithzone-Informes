@@ -15,7 +15,7 @@ namespace Models
         /// <summary>
         /// Obtiene todas las reservas con sus relaciones (Socio y Actividad) cargadas
         /// </summary>
-        /// <returns>Lista de todas las reservas con navegación eager loading</returns>
+        /// <returns> Lista de todas las reservas con navegación eager loading</returns>
         public List<Reserva> GetAll()
         {
             using (var context = new zenithzoneEntities())

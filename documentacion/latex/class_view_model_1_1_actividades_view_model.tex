@@ -1,0 +1,68 @@
+\doxysection{View\+Model.\+Actividades\+View\+Model Class Reference}
+\hypertarget{class_view_model_1_1_actividades_view_model}{}\label{class_view_model_1_1_actividades_view_model}\index{ViewModel.ActividadesViewModel@{ViewModel.ActividadesViewModel}}
+
+
+\doxylink{namespace_view_model}{View\+Model} para la gestión de Actividades Maneja la lógica de negocio y la interacción entre la vista de actividades y el repositorio Implementa operaciones CRUD completas.  
+
+
+Inheritance diagram for View\+Model.\+Actividades\+View\+Model:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_view_model_1_1_actividades_view_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_actividades_view_model_a9a638091f594488f0b10afc42bf64750}\label{class_view_model_1_1_actividades_view_model_a9a638091f594488f0b10afc42bf64750} 
+{\bfseries Actividades\+View\+Model} ()
+\begin{DoxyCompactList}\small\item\em Constructor del \doxylink{class_view_model_1_1_actividades_view_model}{Actividades\+View\+Model} Inicializa el repositorio, los comandos y carga los datos iniciales. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_view_model_1_1_actividades_view_model_ac9f46f4efb59e1bbd7ecf02dd3a42ca2}\label{class_view_model_1_1_actividades_view_model_ac9f46f4efb59e1bbd7ecf02dd3a42ca2} 
+Observable\+Collection$<$ \doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} $>$ {\bfseries Actividades}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Colección observable de todas las actividades Se actualiza automáticamente en la vista cuando cambia. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_actividades_view_model_ae9891f9f119f05bd7633b4ac862f558a}\label{class_view_model_1_1_actividades_view_model_ae9891f9f119f05bd7633b4ac862f558a} 
+\doxymbox{\hyperlink{class_models_1_1_actividad}{Actividad}} {\bfseries Selected\+Actividad}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_models_1_1_actividad}{Actividad} actualmente seleccionada en el Data\+Grid Controla el estado del formulario y los comandos disponibles. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_actividades_view_model_ac7af59f619c41b697627ca69ba01fc4d}\label{class_view_model_1_1_actividades_view_model_ac7af59f619c41b697627ca69ba01fc4d} 
+bool {\bfseries Is\+Editing\+Existing\+Actividad}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Indica si se está editando una actividad existente (Id != 0). \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_actividades_view_model_a52d758019facfd1f63e2d43e27e83ee0}\label{class_view_model_1_1_actividades_view_model_a52d758019facfd1f63e2d43e27e83ee0} 
+bool {\bfseries Is\+Form\+Enabled}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Indica si el formulario debe estar habilitado. \end{DoxyCompactList}\item 
+\Hypertarget{class_view_model_1_1_actividades_view_model_a8981f28cf33fa888c947bef7e2aff18e}\label{class_view_model_1_1_actividades_view_model_a8981f28cf33fa888c947bef7e2aff18e} 
+ICommand {\bfseries Agregar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+\Hypertarget{class_view_model_1_1_actividades_view_model_a356356869747946dc67218d4fd0a7dac}\label{class_view_model_1_1_actividades_view_model_a356356869747946dc67218d4fd0a7dac} 
+ICommand {\bfseries Guardar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+\Hypertarget{class_view_model_1_1_actividades_view_model_a9849e590df9f6b34d31d399fc4390d89}\label{class_view_model_1_1_actividades_view_model_a9849e590df9f6b34d31d399fc4390d89} 
+ICommand {\bfseries Editar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+\Hypertarget{class_view_model_1_1_actividades_view_model_ac23cb3c0a400b1445e3391818fbd8569}\label{class_view_model_1_1_actividades_view_model_ac23cb3c0a400b1445e3391818fbd8569} 
+ICommand {\bfseries Eliminar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\item 
+\Hypertarget{class_view_model_1_1_actividades_view_model_ae37164f1aafed600a5f3fbde6e1f2be0}\label{class_view_model_1_1_actividades_view_model_ae37164f1aafed600a5f3fbde6e1f2be0} 
+ICommand {\bfseries Cancelar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_view_model_1_1_base_view_model_a21d4f5950f0d07daa9c9ecaa8f1eda63}{On\+Property\+Changed}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Método protegido para notificar cambios en las propiedades Debe ser llamado en el setter de cada propiedad que afecte a la vista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \doxymbox{\hyperlink{class_view_model_1_1_base_view_model}{View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\begin{DoxyCompactList}\small\item\em Evento que se dispara cuando una propiedad cambia su valor Permite que la interfaz de usuario se actualice automáticamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_view_model}{View\+Model} para la gestión de Actividades Maneja la lógica de negocio y la interacción entre la vista de actividades y el repositorio Implementa operaciones CRUD completas. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+View\+Model/\+Actividades\+View\+Model.\+cs\end{DoxyCompactItemize}

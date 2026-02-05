@@ -1,0 +1,143 @@
+\doxysection{Models.\+Socio\+Repository Class Reference}
+\hypertarget{class_models_1_1_socio_repository}{}\label{class_models_1_1_socio_repository}\index{Models.SocioRepository@{Models.SocioRepository}}
+
+
+Repositorio para gestionar las operaciones CRUD de Socios Implementa el patrón Repository para abstraer el acceso a datos.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} $>$ \doxymbox{\hyperlink{class_models_1_1_socio_repository_abdf8d147f694ac47b7ebbd63b56cdf9f}{Get\+All}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene todos los socios de la base de datos. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} \doxymbox{\hyperlink{class_models_1_1_socio_repository_ab1721ebbf378a8e3a57ab13bcfd15a14}{Get\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Obtiene un socio específico por su ID. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_models_1_1_socio_repository_ac289e028706f9b6109ce78c42e19446c}{Add}} (\doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} socio)
+\begin{DoxyCompactList}\small\item\em Agrega un nuevo socio a la base de datos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_models_1_1_socio_repository_a1db6cc6859a4466d1cf5c802ad05303f}{Update}} (\doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} socio)
+\begin{DoxyCompactList}\small\item\em Actualiza un socio existente en la base de datos. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_models_1_1_socio_repository_a750c5eddead791669ea4b45d0a273447}{Tiene\+Reservas}} (int id)
+\begin{DoxyCompactList}\small\item\em Verifica si un socio tiene reservas asociadas. \end{DoxyCompactList}\item 
+\Hypertarget{class_models_1_1_socio_repository_ae22259f35271e35228a505a7fc363528}\label{class_models_1_1_socio_repository_ae22259f35271e35228a505a7fc363528} 
+bool string mensaje {\bfseries Delete} (int id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_models_1_1_socio_repository_a2e0a8b8444fe1175313a33a7a12e6548}{exito}}
+\begin{DoxyCompactList}\small\item\em Elimina un socio de la base de datos Valida que el socio no tenga reservas asociadas antes de eliminar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Repositorio para gestionar las operaciones CRUD de Socios Implementa el patrón Repository para abstraer el acceso a datos. 
+
+\label{doc-func-members}
+\Hypertarget{class_models_1_1_socio_repository_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_models_1_1_socio_repository_ac289e028706f9b6109ce78c42e19446c}\index{Models.SocioRepository@{Models.SocioRepository}!Add@{Add}}
+\index{Add@{Add}!Models.SocioRepository@{Models.SocioRepository}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{class_models_1_1_socio_repository_ac289e028706f9b6109ce78c42e19446c} 
+void Models.\+Socio\+Repository.\+Add (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_models_1_1_socio}{Socio}}}]{socio}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega un nuevo socio a la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socio} & Objeto \doxylink{class_models_1_1_socio}{Socio} a agregar\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_models_1_1_socio_repository_abdf8d147f694ac47b7ebbd63b56cdf9f}\index{Models.SocioRepository@{Models.SocioRepository}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!Models.SocioRepository@{Models.SocioRepository}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily \label{class_models_1_1_socio_repository_abdf8d147f694ac47b7ebbd63b56cdf9f} 
+List$<$ \doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} $>$ Models.\+Socio\+Repository.\+Get\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene todos los socios de la base de datos. 
+
+\begin{DoxyReturn}{Returns}
+Lista de todos los socios
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_socio_repository_ab1721ebbf378a8e3a57ab13bcfd15a14}\index{Models.SocioRepository@{Models.SocioRepository}!GetById@{GetById}}
+\index{GetById@{GetById}!Models.SocioRepository@{Models.SocioRepository}}
+\doxysubsubsection{\texorpdfstring{GetById()}{GetById()}}
+{\footnotesize\ttfamily \label{class_models_1_1_socio_repository_ab1721ebbf378a8e3a57ab13bcfd15a14} 
+\doxymbox{\hyperlink{class_models_1_1_socio}{Socio}} Models.\+Socio\+Repository.\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene un socio específico por su ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único del socio\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El socio encontrado o null si no existe
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_socio_repository_a750c5eddead791669ea4b45d0a273447}\index{Models.SocioRepository@{Models.SocioRepository}!TieneReservas@{TieneReservas}}
+\index{TieneReservas@{TieneReservas}!Models.SocioRepository@{Models.SocioRepository}}
+\doxysubsubsection{\texorpdfstring{TieneReservas()}{TieneReservas()}}
+{\footnotesize\ttfamily \label{class_models_1_1_socio_repository_a750c5eddead791669ea4b45d0a273447} 
+bool Models.\+Socio\+Repository.\+Tiene\+Reservas (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si un socio tiene reservas asociadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único del socio\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si el socio tiene reservas, False en caso contrario
+\end{DoxyReturn}
+\Hypertarget{class_models_1_1_socio_repository_a1db6cc6859a4466d1cf5c802ad05303f}\index{Models.SocioRepository@{Models.SocioRepository}!Update@{Update}}
+\index{Update@{Update}!Models.SocioRepository@{Models.SocioRepository}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_models_1_1_socio_repository_a1db6cc6859a4466d1cf5c802ad05303f} 
+void Models.\+Socio\+Repository.\+Update (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_models_1_1_socio}{Socio}}}]{socio}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza un socio existente en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socio} & Objeto \doxylink{class_models_1_1_socio}{Socio} con los datos actualizados\\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_models_1_1_socio_repository_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_models_1_1_socio_repository_a2e0a8b8444fe1175313a33a7a12e6548}\index{Models.SocioRepository@{Models.SocioRepository}!exito@{exito}}
+\index{exito@{exito}!Models.SocioRepository@{Models.SocioRepository}}
+\doxysubsubsection{\texorpdfstring{exito}{exito}}
+{\footnotesize\ttfamily \label{class_models_1_1_socio_repository_a2e0a8b8444fe1175313a33a7a12e6548} 
+bool Models.\+Socio\+Repository.\+exito}
+
+
+
+Elimina un socio de la base de datos Valida que el socio no tenga reservas asociadas antes de eliminar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador único del socio a eliminar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con (éxito, mensaje):\+ true y mensaje vacío si se eliminó correctamente, false y mensaje de error si no se pudo eliminar
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Models/\+Socio\+Repository.\+cs\end{DoxyCompactItemize}
